@@ -1,0 +1,20 @@
+﻿@model List<Comic>
+
+<h1 style="color:blue">
+    Ejemplo colecciones Comics
+</h1>
+<a asp-controller="Practicas"
+   asp-action="Menu">
+    Volver al menú
+</a>
+<hr/>
+@foreach (Comic comic in Model)
+{
+    <div class="card" style="width: 18rem; float: left">
+        <img src="@comic.Imagen" class="card-img-top"/>
+        <div class="card-body">
+            <h2 class="card-title">@comic.Nombre</h2>
+            <p class="card-text">@comic.Descripcion</p>
+        </div>
+    </div>
+}

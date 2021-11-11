@@ -16,6 +16,12 @@ namespace PrimerCore.Controllers
             return View();
         }
 
+        public IActionResult Menu()
+        {
+            //AQUI ENVIAMOS LA INFORMACION
+            return View();
+        }
+
         public IActionResult InformacionControllerView()
         {
             ViewBag.Nombre = "Alumno";
