@@ -1,0 +1,17 @@
+﻿<h1>Controller --> View</h1>
+
+<a asp-controller="Informacion"
+   asp-action="Index">
+    Volver al menú
+</a>
+
+<hr/>
+<h2 style="color:blue">
+    Nombre: @ViewBag.Nombre
+</h2>
+<h2 style="color:fuchsia">
+    Descripción: @ViewBag.Descripcion
+</h2>
+<h2 style="color:green">
+    Año: @ViewData["Year"]
+</h2>
