@@ -9,6 +9,7 @@ namespace PrimerCore.Controllers
 {
     public class PracticasController : Controller
     {
+        //ESTE METODO SE LLAMA GET
         public IActionResult Menu()
         {
             return View();
