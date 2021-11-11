@@ -56,5 +56,15 @@ namespace PrimerCore.Controllers
         {
             return View();
         }
+
+        //TENEMOS QUE CREAR UN METODO CON EL MISMO NOMBRE
+        //QUE LA VISTA, PERO CON LA DECORACION [HttpPost]
+        [HttpPost]
+        public IActionResult 
+            InformacionPostViewController
+            (Persona persona)
+        {
+            return View(persona);
+        }
     }
 }
