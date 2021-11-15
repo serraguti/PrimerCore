@@ -1,0 +1,33 @@
+﻿@model List<int>
+
+@{ 
+    //EN VIEWBAG VIENE UN List, DEBEMOS ALMACENARLO
+    //EN UNA VARIABLE DE SU TIPO
+    //DEBEMOS HACER CASTING, ES DECIR, CONVERTIR
+    //A SU TIPO 
+    List<int> randoms = ViewBag.Random as List<int>;
+    //List<int> randoms2 = (List<int>) ViewBag.Random;
+}
+
+<h1>Conjetura Collatz</h1>
+<form method="post">
+    <select class="form-control" name="numero">
+        @foreach (int numero in randoms)
+        {
+            <option value="@numero">@numero</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-outline-danger">
+        Mostrar Collatz
+    </button>
+</form>
+<hr/>
+@if (Model != null)
+{
+    <ul>
+        @foreach (int numero in Model)
+        {
+            <li>@numero</li>
+        }
+    </ul>
+}
