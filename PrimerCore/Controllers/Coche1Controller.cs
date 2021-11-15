@@ -12,16 +12,9 @@ namespace PrimerCore.Controllers
         //DECLARAMOS UN COCHE PARA UTILIZAR
         private Coche car;
 
-        public Coche1Controller()
+        public Coche1Controller(Coche car)
         {
-            //CONSTRUIMOS UN NUEVO COCHE Y LE DAMOS PROPIEDADES
-            this.car = new Coche();
-            this.car.Marca = "Volkswagen";
-            this.car.Modelo = "Escarabajo";
-            //IMAGEN EN LOCAL
-            this.car.Imagen = "herbie.jpg";
-            this.car.Velocidad = 0;
-            this.car.VelocidadMaxima = 110;
+            this.car = car;
         }
 
         public IActionResult Index()
