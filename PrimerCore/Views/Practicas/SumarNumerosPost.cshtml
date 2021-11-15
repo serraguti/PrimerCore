@@ -1,0 +1,20 @@
+﻿<h1 style="color:blue">
+    Sumar números POST
+</h1>
+
+<form method="post">
+    <label>Número 1: </label>
+    <input type="number" name="numero1" class="form-control"/><br/>
+    <label>Número 2:</label>
+    <input type="number" name="numero2" class="form-control"/><br/>
+    <button type="submit" class="btn-info">
+        Sumar números
+    </button>
+</form>
+<hr/>
+@if (ViewBag.Suma != null)
+{
+    <h2 style="color:red">
+        La suma de los números es: @ViewBag.suma
+    </h2>
+}
